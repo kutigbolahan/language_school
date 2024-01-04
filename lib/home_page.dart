@@ -1,5 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:languageschool/choose_language.dart';
 
 class HomePage extends StatelessWidget {
   const HomePage({super.key});
@@ -89,7 +90,13 @@ class HomePage extends StatelessWidget {
                             MaterialStateProperty.all(Colors.black),
                         shape: MaterialStateProperty.all(RoundedRectangleBorder(
                             borderRadius: BorderRadius.circular(10)))),
-                    onPressed: () {},
+                    onPressed: () {
+                      Navigator.of(context).push(
+                        MaterialPageRoute(
+                          builder: (context) => const ChooseLangaugePage(),
+                        ),
+                      );
+                    },
                     child: const Text(
                       'Next',
                       style: TextStyle(
